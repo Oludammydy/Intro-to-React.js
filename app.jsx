@@ -359,4 +359,37 @@ Using curly braces, set the <h1></h1>‘s inner text equal to theBestString. */}
         <img
           src={pics.owlCat}
           alt="Ghastly Abomination" />
-        ); 
+        );
+
+        {/* On line 7, declare a new variable named gooseImg. Set its value equal to a JSX <img /> element.
+
+Give the <img /> an attribute with a name of src. Set the attribute’s value equal to the variable goose. */}
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        const goose = 'https://content.codecademy.com/courses/React/react_photo-goose.jpg';
+
+        // Declare new variable here:
+        const gooseImg = (
+        <img
+          src={goose} />
+        );
+        {/* Use ReactDOM.render() to render gooseImg.
+
+ReactDOM.render()‘s first argument should be gooseImg.
+
+ReactDOM.render()‘s second argument should be document.getElementById('app') */}
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        const goose = 'https://content.codecademy.com/courses/React/react_photo-goose.jpg';
+
+        // Declare new variable here:
+        const gooseImg = (
+        <img
+          src={goose} />
+        );
+        ReactDOM.render(
+        gooseImg,
+        document.getElementById('app')
+        );
