@@ -142,12 +142,99 @@ ReactDOM.render(
 // The Virtual DOM 
 // One special thing about ReactDOM.render() is that it only updates DOM elements that have changed. That means that if you render the exact same thing twice in a row, the second render will do nothing:
 const hello = <h1>Hello world</h1>;
- 
+
 // This will add "Hello world" to the screen:
- 
+
 ReactDOM.render(hello, document.getElementById('app'));
- 
+
 // This won't do anything at all:
- 
+
 ReactDOM.render(hello, document.getElementById('app'));
 // This is significant! Only updating the necessary DOM elements is a large part of what makes React so successful.React accomplishes this thanks to something called the virtual DOM.
+
+
+
+
+
+
+// Part 2 - Advanced JSX
+// Declare a new variable named myDiv. Set myDiv equal to a JSX <div></div> element.In between the <div></div> tags, write the text I AM A BIG DIV. Give your <div></div> the following attribute:
+className = "big"
+// Answer
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Write code here:
+const myDiv = (
+  <div className="big">I AM A BIG DIV</div>
+);
+// Underneath your <div></div>, call ReactDOM.render. For ReactDOM.render()‘s first argument, pass in myDiv. For ReactDOM.render()‘s second argument, pass in document.getElementById('app').If your rendered <div></div> has a class of "big", then it should look big in the browser!
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Write code here:
+const myDiv = (
+  <div className="big">I AM A BIG DIV</div>
+ReactDOM.render(myDiv);
+ReactDOM.render(document.getElementById('app'));
+);
+
+
+// Self-Closing Tags
+// In app.js, fix the broken JSX by adding slashes to all of the self-closing tags.
+const profile = (
+  <div>
+    <h1>I AM JENKINS</h1>
+    <img src="images/jenkins.png" >
+      <article>
+        I LIKE TO SIT
+        <br>
+          JENKINS IS MY NAME
+          <br>
+            THANKS HA LOT
+          </article>
+        </div>
+        );
+
+        {/* Answer */}
+        const profile = (
+        <div>
+          <h1>I AM JENKINS</h1>
+          <img src="images/jenkins.png" />
+          <article>
+            I LIKE TO SIT
+            <br />
+            JENKINS IS MY NAME
+            <br />
+            THANKS HA LOT
+          </article>
+        </div>
+        );
+
+
+        {/* JavaScript In Your JSX In Your JavaScript */}
+        {/* Starting on line 5, carefully write the following code. What do you think will appear in the browser? */}
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        // Write code here:
+        ReactDOM.render(
+        <h1>2 + 3</h1>,
+        document.getElementById('app')
+        );
+        {/* Answer was 2 + 3 */}
+
+
+        {/* Curly Braces in JSX */}
+        {/* Add a pair of curly braces to the code from last exercise, so that your JSX expression looks like this: */}
+        <h1>{2 + 3}</h1>
+        {/* Everything inside of the curly braces will be treated as regular JavaScript. */}
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        // Write code here:
+        ReactDOM.render(
+        <h1>{2 + 3}</h1>,
+        document.getElementById('app')
+        );
+        {/* Answer = 5 */}
