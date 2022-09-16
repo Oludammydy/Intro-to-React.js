@@ -311,3 +311,14 @@ Insert a pair of curly braces into the <h1></h1>, so that the browser displays 2
         document.getElementById('app')
         )
 
+
+        {/* Variables in JSX */}
+        {/* Replace ReactDOM.render()‘s first argument with a JSX <h1></h1>.
+
+Using curly braces, set the <h1></h1>‘s inner text equal to theBestString. */}
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        const theBestString = 'tralalalala i am da best';
+
+        ReactDOM.render(<h1>{theBestString}</h1>, document.getElementById('app'));
